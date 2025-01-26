@@ -1,0 +1,263 @@
+/* Base Styling */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background-color: #0b0c10;
+    animation: fadeIn 1.5s ease;
+}
+
+header {
+    background: linear-gradient(90deg, #1f2833, #66fcf1);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    animation: fadeIn 2s ease;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #66fcf1;
+}
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #1e1e1e, #2c2c2c);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Branch Section */
+.branch-section {
+    padding: 20px;
+}
+
+.branch {
+    background-color: #1c1c1c;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    animation: slideInUp 1s ease-in-out;
+}
+
+.branch h2 {
+    color: #ff007f;
+    margin-bottom: 10px;
+}
+
+.branch-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.branch-content .image,
+.branch-content .map {
+    background-color: #2c2c2c;
+    flex: 1 1 30%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.branch-content .description {
+    flex: 1 1 30%;
+    color: #ccc;
+}
+
+/* Contact Section */
+.contact-page {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #2c2c2c, #3e3e3e);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-page h2 {
+    color: #ff007f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-page p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.contact-page form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-page .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.contact-page textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-page button {
+    background-color: #ff007f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-page button:hover {
+    background-color: #e60073;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1 1 30%;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff007f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .branch-content {
+        flex-direction: column;
+    }
+
+    .contact-page form {
+        width: 90%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
